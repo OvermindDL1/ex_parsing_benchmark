@@ -60,7 +60,7 @@ defmodule Bench.Combine do
   end
 
   def parse_datetime(input) do
-    Combine.parse(input, datetime)
+    Combine.parse(input, datetime())
   end
 
   defp datetime, do: date() |> ignore(char("T")) |> time()
