@@ -41,14 +41,8 @@ defmodule Bench.ExSpirit.Parser do
 
   defrule utc(lit(?Z)), map: (fn _ -> "UTC" end).()
 
-  defrule tz(seq([ alt([ char(?-), char(?+) ]), word()])), map: (&Enum.join/1).()
+  defrule tz(seq([ alt([ char(?-), char(?+) ]), repeat(char([?A..?Z, ?a..?z, ?0..?9, ?_]), 1)])), map: (&Enum.join/1).()
 
-  defrule word(context) do # TODO:  Remove this once the `repeat` parser is made
-    %{context |
-      rest: "",
-      result: context.rest,
-    }
-  end
 end
 
 

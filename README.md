@@ -20,19 +20,19 @@ Example output of the bench:
 ```elixir
 ##### With input parse_datetime #####
 Name                ips        average  deviation         median
-ex_spirit      197.95 K        5.05 μs    ±14.40%        4.70 μs
-combine         74.02 K       13.51 μs    ±45.34%       16.00 μs
+ex_spirit      195.62 K        5.11 μs    ±15.99%        4.70 μs
+combine         62.02 K       16.12 μs    ±41.23%       16.00 μs
 
 Comparison:
-ex_spirit      197.95 K
-combine         74.02 K - 2.67x slower
+ex_spirit      195.62 K
+combine         62.02 K - 3.15x slower
 
 ##### With input parse_int_10 #####
 Name                ips        average  deviation         median
-ex_spirit      636.60 K        1.57 μs    ±24.06%        1.60 μs
-combine        162.52 K        6.15 μs   ±124.15%     0.00000 μs
+ex_spirit      633.29 K        1.58 μs    ±25.00%        1.60 μs
+combine        164.10 K        6.09 μs    ±12.04%        6.20 μs
 
 Comparison:
-ex_spirit      636.60 K
-combine        162.52 K - 3.92x slower
+ex_spirit      633.29 K
+combine        164.10 K - 3.86x slower
 ```
